@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Customers = () => {
-  return (
+    const [count, setCount] = useState(0);
+    const [showHide, setShowHide] = useState(true);
+    const addCount = () => {
+        setCount(count - 1);
+    }
+    const toggleButton = () => {
+        setShowHide(!showHide);
+    }
+    return (
     <div>
-      this is customer page
+      <h1>{count}</h1>
+      {showHide && "showing the message"} <br />
+      <button onClick={addCount}> Addition</button><br />
+        <button onClick={toggleButton}>Show/Hide</button>
     </div>
   )
 }
