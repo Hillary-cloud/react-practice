@@ -22,7 +22,7 @@ const Todo = () => {
   return (
     <div>
       <input type="text" onChange={handleChange} />
-    <button onClick={addTask}>Add Task</button><br />
+    <button onClick={addTask}>Add a Task</button><br />
     {todoList.map((task) => (
         
         <div>
